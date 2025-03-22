@@ -6,7 +6,8 @@ const App = () => {
   const [check, setCheck] = useState('');
 
   const checknum = () => {
-    setCheck(state % 2 === 0 ? 'Even' : 'Odd');
+    const num = state
+    setCheck(num % 2 === 0 ? 'Even' : 'Odd');
   };
 
   return (
@@ -14,7 +15,6 @@ const App = () => {
       <div className='input'>
         <input
           type="text"
-          value={state}
           onChange={(e) => setState(e.target.value)}
         />
         <button onClick={checknum}>Check</button>
