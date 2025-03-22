@@ -14,7 +14,7 @@ const App = () => {
     <div className='container'>
       <div className='input'>
         <input
-          type="text"
+          type="number"
           onChange={(e) => setState(e.target.value)}
         />
         <button onClick={checknum}>Check</button>
