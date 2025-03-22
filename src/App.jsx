@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css'
 
 const App = () => {
   const [state, setState] = useState('');
@@ -9,14 +10,16 @@ const App = () => {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={state}
-        onChange={(e) => setState(e.target.value)}
-      />
-      <button onClick={checknum}>Check</button>
-      <h1>{check}</h1>
+    <div className='container'>
+      <div className='input'>
+        <input
+          type="text"
+          value={state}
+          onChange={(e) => setState(e.target.value)}
+        />
+        <button onClick={checknum}>Check</button>
+      </div>
+      <h1 className='result'>{check}</h1>
     </div>
   );
 }
